@@ -1,0 +1,45 @@
+//Import the Scanner class
+import java.util.Scanner;
+
+public class CatsDogs {
+    public static void main(String[] args) {
+
+        //Create Scanner object
+        Scanner sc = new Scanner(System.in);
+
+        //Input number of test cases
+        int T = sc.nextInt();
+
+        //Loop till the number of test cases
+        for(int i=0; i<T; i++) {
+
+            //Declare the array of integers
+            int[] arr = new int[3];
+
+            //Input the array values
+            for(int j=0; j<3; j++) {
+                arr[i] = sc.nextInt();
+            }
+
+            //Store the legs of each cat in the variable c
+            int c = arr[0] * 4;
+
+            //Store the legs of each dog in the variable d
+            int d = arr[1] * 4;
+
+            //Strore the number of legs given in the array input
+            int l = arr[2];
+
+            //If the number of legs given in the array is either equals to the number of legs of dog or number of legs of dog + cat then we print YES
+            if(l == d || l == (c + d)) {
+                System.out.println("yes");
+            }
+            //Otherwise we print NO
+            else {
+                System.out.println("no");
+            }
+        }
+
+        sc.close();
+    }
+}
